@@ -1,0 +1,459 @@
+<html lang="en">
+
+<head>
+    <title>Alertify - Sign In</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//jonthornton.github.io/jquery-timepicker/jquery.timepicker.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!--    Made by Erik Terwan    -->
+    <!--   24th of November 2015   -->
+    <!--        MIT License        -->
+    <div id="contain">
+        <nav role='navigation'>
+            <div id="menuToggle">
+                <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+                <input id="checkboxH" type="checkbox" />
+
+                <!--
+          Some spans to act as a hamburger.
+
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+                <ul id="menu">
+
+                    <a href="Settings.html">
+
+                        <li>
+                            <i class="material-icons" style="position:absolute;top:59px;">settings</i>
+                            <b style="padding-left: 28px">Settings </b>
+                        </li>
+                        </a>
+
+                    <a href="91">
+
+                        <li>
+                            <b>Life Threatening Emergencies: </b>911</li>
+                        </a>
+
+                    <a href="tel:4155582650">
+
+                        <li>
+                            <b>Child Abuse Hotline: </b>415-558-2650</li>
+                        </a>
+
+                    <a href="tel:4155539225">
+
+                        <li>
+                            <b>Domestic Violence: </b>415-553-9225</b>
+                        </li>
+                        </a>
+
+                    <a href="tel:4155531133">
+
+                        <li>
+                            <b>Hate Crimes: </b>415-553-1133</b>
+                        </li>
+                        </a>
+
+                    <a href="tel:4155531145">
+
+                        <li>
+                            <b>Homicide: </b>415-553-1145</li>
+                        </a>
+
+                    <a href="tel:4155539800">
+
+                        <li>
+                            <b>Human Trafficking: </b>415-553-9800</li>
+                        </a>
+
+
+                    <a href="https://erikterwan.com/" target="_blank">
+
+                        <li>
+                            <u style="color:blue;">Show me more...</u>
+                        </li>
+                        </a>
+
+                    <button id="alertButton"> Send Alert </button>
+                    </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="limiter">
+
+    <select class="filter">
+            <option>Filter...</option>
+            <option>Most Relevent</option>
+            <option>Most Verfied</option>
+            <option>Closest Distance</option>
+            <option>Farthest Distance</option>
+        </select>
+        <div class="container2" id="main">
+            <hr id="hr2" width="400" style="border: 2px dashed #FFFF" color="#FFFFFF" size="6">
+            <form>
+                <ol class="list-group list_of_items">
+                    <li class="list-group-item">
+                        <div class="text_holder">
+                            <span class="openCall"><img src="person1.png" height="30px" width="30px"/></span>
+                            <span id="text1">
+                                <span id="innerText">Richmond Bart Towards MacArthur:</span> Member on Bart carrying knife and looking suspicious.....
+                                <details id="showMore">
+                                    <summary>
+                                        <a id="showMore">show more</a>
+                                    </summary>
+                                    <p style="
+                                    margin-left: 10px;
+                                    line-height: 1.2;
+                                ">Be careful if you are on the 8:40am MacArthur train</p>
+                                    <details id="showMore" style="margin-left: 10px;">
+                                            <summary>
+                                                <a id="showMore">Comments</a>
+                                            </summary>
+                                           <textarea>Enter comments</textarea>
+                                    </details>
+                                </details>
+                            </span>
+                            <div id="upAndDownArrows">
+                                <i class="fa fa-angle-up upArrow1" style="font-size:32px"></i>
+                                <span class="number1">0</span>
+                                <i class="fa fa-angle-down downArrow1" style="font-size:32px"></i>
+                            </div>
+                            <span id="time">3:00PM</span>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" class="pull-right">
+                            </label>
+                        </div>
+                    </li>
+                    <div class="content">
+                        <form action="#" method="post">
+                            <fieldset>
+                                <input type="text" placeholder="Type your message…">
+                                <input type="hidden">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <li class="list-group-item">
+                        <div class="text_holder">
+                            <span class="openCall"><img src="person2.png" height="30px" width="30px"/></span>
+                            <span id="text1">
+                                <span id="innerText">Wild Fire Near Presidio Park:</span> Fire is growing and heading towards buildings in Sea Cliff..
+                                <details id="showMore">
+                                    <summary>
+                                        <a id="showMore">show more</a>
+                                    </summary>
+                                    <p>Air is difficult to breathe.Be Careful</p>
+                                    <p><a style="
+                                        text-decoration: underline;
+                                        color: blue;
+                                        margin-left: 38px;
+                                    ">Click here to donate!</a></p>
+                                    <details id="showMore" style="margin-left: 10px;">
+                                            <summary>
+                                                <a id="showMore">Comments</a>
+                                            </summary>
+                                           <textarea>Enter comments</textarea>
+                                    </details>
+                                </details>
+                            </span>
+                            <div id="upAndDownArrows">
+                                <a class="upArrow">
+                                    <i class="fa fa-angle-up" style="font-size:32px"></i>
+                                </a>
+                                <span class="number">9</span>
+                                <i class="fa fa-angle-down downArrow" style="font-size:32px"></i>
+                            </div>
+                            <span id="time">2:45PM</span>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" class="pull-right">
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="text_holder">
+                            <span class="openCall"><img src="person1.png" height="30px" width="30px"/></span>
+                            <span id="text1">
+                                <span> <span><span id="innerText">Bruglary at Sephora on Powell:</span> Suspect is male wearing red hoodie and stole a..  <details id="showMore">
+                                        <summary>
+                                            <a id="showMore">show more</a>
+                                        </summary>
+                                        <p>womens purse.</p>
+                                        <details id="showMore" style="margin-left: 10px;">
+                                                <summary>
+                                                    <a id="showMore">Comments</a>
+                                                </summary>
+                                               <textarea>Enter comments</textarea>
+                                        </details>
+                                    </details>
+                                </span>
+
+                                </span>
+
+                            </span>
+                            <div id="upAndDownArrows">
+                                <a class="upArrow">
+                                    <i class="fa fa-angle-up" style="font-size:32px"></i>
+                                </a>
+                                <span class="number">3</span>
+                                <i class="fa fa-angle-down downArrow" style="font-size:32px"></i>
+                            </div>
+                            <span id="time">10:30AM</span>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" class="pull-right">
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="text_holder">
+                            <span class="openCall"><img src="person2.png" height="30px" width="30px"/></span>
+                            <span id="text1">
+                                <span id="innerText">Missing Water Bottle</span> It is purple and pretty. Please give back (:....
+                                <details id="showMore">
+                                    <summary>
+                                        <a id="showMore">show More</a>
+                                    </summary>
+                                <p style="
+                                margin-left: 10px;
+                                line-height: 1.2;
+                            ">thank you!</p>
+                                <details id="showMore" style="margin-left: 10px;">
+                                        <summary>
+                                            <a id="showMore">Comments</a>
+                                        </summary>
+                                       <textarea>Enter comments</textarea>
+                                </details>
+                                </details>
+                            </span>
+                            <div id="upAndDownArrows">
+                                <i class="fa fa-angle-up upArrow" style="font-size:32px"></i>
+                                <span class="number">-9</span>
+                                <i class="fa fa-angle-down downArrow" style="font-size:32px"></i>
+                            </div>
+                            <span id="time">9:00AM</span>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" class="pull-right">
+                            </label>
+                        </div>
+                    </li>
+                </ol>
+            </form>
+        </div>
+        <div class="slider display1">
+
+        <form role="form" id="main_input_box">
+            <hr id="hr3" width="400" style="border: 2px dashed #FFFF" color="#FFFFFF" size="6">
+            <h1>Notify Users:</h1>
+            <label>
+                <input type="text" class="form-control2" id="custom_textbox" name="Item" placeholder="Enter Subject Line here.....">
+                <input type="text" class="form-control2" id="custom_textbox" name="Item" placeholder="Enter Location here.....">
+                <input type="text" class="form-control" id="custom_textbox2" name="Item" placeholder="Enter Message here.....">
+                <span id="addFile"><img src="paperclip.png" height='14px' width='14px' >Add File</span>
+                <input type="submit" id="butt" value="Add" class="btn2 btn-primary add_button">
+            </label>
+            <div class="close23">x</div>
+        </form>
+    </div>
+        <div id="footer">
+            <button class="trigger">
+                <span class="txt1">Add Report
+                    <img src="swipe up .png" height="25" width="25" /> </span>
+            </button>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close2">&times;</span>
+                <form class="login100-form validate-form">
+                <div id="checkboxConditions">
+                        <h1 style="
+                        margin-bottom: 14px;
+                    ">Select User(s):</h1>
+                        <label class="containerC">Friends
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="containerC">Family
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                              <label class="containerC">Alertify Users
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                    </div>
+
+                    <div id="wrapper">
+                            <form id="paper" method="get" action="">
+<!--
+                                <div id="margin">Enter Message: <input id="title" type="text" name="title"></div> -->
+                                <textarea placeholder="Enter Message..." id="text" name="text" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; height: 160px; "></textarea>
+                                <br>
+                                <!-- <input id="button" type="submit" value="Create"> -->
+
+                            </form>
+
+                        </div>
+                            <button id="loginForm" class="login100-form-btn">
+                                <a onclick="onAlertClicked()" id="send" style="
+                                color: white;
+                                font-size: 15px;
+                            ">
+                                    Send
+                                </a>
+                            </button>
+                </form>
+                <!-- </div> -->
+            </div>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                $('#title').focus();
+
+
+            $('.trigger').click(function () {
+                $('.slider').show();
+                $('.filter').css('height', '52px')
+            });
+
+            $('.close23').click(function () {
+                $('.slider').hide('slow');
+                $('.filter').css('height', 'auto')
+            });
+
+            var number = $('.number1').text();
+            console.log(number)
+            var number = parseInt(number)
+            $(".upArrow1").click(function () {
+                number++;
+                $(".number1").text(number);
+
+            });
+            $(".downArrow1").click(function () {
+                number--;
+                $(".number1").text(number);
+            });
+
+            if (number < -1) {
+
+            }
+
+            $("form#main_input_box").submit(function (event) {
+                event.preventDefault();
+                var deleteButton = "<button class='delete btn btn-warning'>Delete</button>";
+                var editButton = "<button class='edit btn btn-success'>Edit</button>";
+                var twoButtons = "<div class='btn-group pull-right'>" + deleteButton + editButton + "</div>";
+                var checkBox = "<div class='checkbox'><label><input type='checkbox' class='pull-right'></label></div>";
+                $(".list_of_items").prepend("<li class='list-group-item'>" + "<div class='text_holder'>" + "<span id='text1'>" + $("#custom_textbox").val() + $("#custom_textbox2").val() + '</span>' + twoButtons + "</div>" + checkBox + "</li>");
+                $("#custom_textbox").val('');
+            });
+
+            $(".list_of_items").on("click", "button.delete", function () {
+                $(this).closest("li").remove();
+            });
+
+            $(".list_of_items").on("click", "button.edit", function () {
+                var editItemBox = "<form class='edit_input_box'><input type='text' class='itembox'></form>";
+                var originalItem = $(this).parent().val();
+                var deleteButton = "<button class='delete btn btn-warning'>Delete</button>";
+                var editButton = "<button class='edit btn btn-success'>Edit</button>";
+                var twoButtons = "<div class='btn-group pull-right'>" + deleteButton + editButton + "</div>";
+                $(this).closest("div.text_holder").replaceWith(editItemBox);
+                $("form.edit_input_box ").on("submit", function () {
+                    event.preventDefault();
+                    var checkBox = "<label><input type='checkbox'></label>";
+                    $(this).replaceWith("<div>" + $(".itembox").val() + twoButtons + "</div>");
+                });
+            });
+
+            $(".list_of_items").on("click", ":checkbox", function () {
+                $(this).closest("li").toggleClass("completed_item");
+            });
+        });
+    </script>
+     <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            console.log(modal)
+            // Get the button that opens the modal
+            var btn = document.getElementById("alertButton");
+            console.log(btn)
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close2")[0];
+
+            // When the user clicks the button, open the modal
+            btn.onclick = function () {
+                console.log('inim')
+                modal.style.display = "block";
+                console.log(modal.style.display)
+            }
+            console.log(modal.style.display)
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                console.log('ininclose')
+                modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+        </script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.10.0/jquery.timepicker.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Updated JavaScript url -->
+    <script src="//jonthornton.github.io/jquery-timepicker/jquery.timepicker.js"></script>
+    <script type="text/javascript">
+      var currentUserLocation = { lat: 0, lon: 0};
+
+      function onAlertClicked() {
+        console.log('im in onAlertClicked')
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(setUserPosition);
+          }
+      }
+
+      function setUserPosition(position) {
+        console.log('setUserPosition')
+          currentUserLocation.lat =  position.coords.latitude;
+          currentUserLocation.lon =  position.coords.longitude;
+          var userMessage = $('#text').val();
+          console.log(userMessage);
+
+          var xhttp = new XMLHttpRequest();
+          xhttp.open("POST", "home.php", true);
+          xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          xhttp.send("userLat="+currentUserLocation.lat+"&userLon="+currentUserLocation.lon+"&userText="+userMessage);
+      }
+    </script>
+</body>
+
+</html>

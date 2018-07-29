@@ -1,0 +1,804 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font: 100%/1.5em "Droid Sans", sans-serif;
+    background: #f2f2f2;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ login ]*/
+.limiter {
+  width: 100%;
+  height:100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #f2f2f2;
+  background: #c8e0d6;
+}
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT license
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+a
+{
+   text-decoration: none;
+   color: #232323;
+
+   transition: color 0.3s ease;
+ }
+
+ a:hover
+ {
+   color: tomato;
+ }
+
+ #menuToggle
+ {
+   display: block;
+   position: absolute;
+   top: 13px;
+   right: 16px;
+
+   z-index: 1;
+
+   -webkit-user-select: none;
+   user-select: none;
+ }
+
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+
+   cursor: pointer;
+
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+
+   -webkit-touch-callout: none;
+ }
+
+ /*
+  * Just a quick hamburger
+  */
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   background: #cdcdcd;
+   background: #2ba2c1eb;
+   border-radius: 3px;
+
+   z-index: 1;
+
+   transform-origin: 4px 0px;
+
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+
+ /*
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+
+ /*
+  * But let's hide the middle one.
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   opacity: 1;
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ /*  */
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 12px;
+ }
+
+ /*
+  * And let's fade it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: scale(1.0, 1.0);
+   opacity: 1;
+ }
+
+ #menu {
+    right: -77px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: left; */
+    /* position: absolute; */
+    width: 301px;
+    height: 1000px;
+    margin: -40px 30px 0 -7px;
+    padding: 35px;
+    padding: 53px 23px 12px;
+    /* padding-top: 125px; */
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+
+.form-control {
+    display: inline-block;
+    }
+    .add_button {
+    margin: 10px 0px 10px 0px;
+    }
+    .checkbox {
+
+    }
+    .completed_item {
+    text-decoration: line-through;
+    }
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      font-size: 16px !important;
+      font: 100%/1.5em "Droid Sans", sans-serif;
+      margin-left: 3px;
+      font-weight: 700;
+    }
+    body {
+    background-color: #f6f6f6;
+    }
+    #main {
+      margin-top:57px;
+      margin-top: 57px;
+    /* float: left; */
+    /* width: 1000px; */
+    overflow-y: auto;
+    height: 100%;
+    /* margin-top: 50px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 50%;
+    border: 1px solid #545454; */
+    }
+
+    .form-control {
+        /* display: block; */
+        font: 100%/1.5em "Droid Sans", sans-serif;
+        width: 92%;
+        height: 74px;
+        padding: 17px 12px;
+        margin: 10px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    }
+
+    .form-control2 {
+      /* display: block; */
+      font: 100%/1.5em "Droid Sans", sans-serif;
+      width: 92%;
+      height: 41px;
+      padding: 17px 12px;
+      margin: 10px 12px 0 12px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #555;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+      -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+      transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  }
+
+    button, html input[type=button], input[type=reset], input[type=submit] {
+        -webkit-appearance: button;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #428bca;
+        border-color: #357ebd;
+        background: #2ba2c1eb;
+    }
+
+    .btn2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+      margin-bottom: 0;
+      font-weight: 400;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      border-radius: 4px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      width: 100;
+  }
+
+    .add_button {
+        margin: 21px 0px 21px 0px;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+
+    #butt {
+        margin-right: 12px;
+        margin: 0px 20px 15px 13px;
+    }
+
+    .close23 {
+      display: flex;
+      display: flex;
+      justify-content: left;
+      position: absolute;
+      /* left: 0px; */
+      /* top: -1px; */
+      right: -1px;
+      font-size: 40px;
+      /* top: -12px; */
+      color: #c8e0d6;
+      /* bottom: 0px; */
+      /* top: 53%; */
+      bottom: 0;
+    }
+
+    .list-group {
+        margin-bottom: 20px;
+        padding-left: 0;
+        margin: 0px 10;
+    }
+
+    .list-group-item {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+        margin-bottom: 17px;
+        background-color: #fff;
+        border-radius: 12px;
+        list-style-type: none;
+        font: 100%/1.5em "Droid Sans", sans-serif;
+    }
+
+    .list-group-item:first-child {
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+    }
+
+    .list-group-item:last-child {
+        margin-bottom: 0;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    .text_holder {
+      display: flex;
+      max-width: 100%;
+      word-wrap: break-word;
+  }
+
+    .pull-right {
+        float: right!important;
+    }
+
+    .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .btn-group .btn+.btn, .btn-group .btn+.btn-group, .btn-group .btn-group+.btn, .btn-group .btn-group+.btn-group {
+        margin-left: -1px;
+    }
+
+    .btn-group>.btn:first-child {
+        margin-left: 0;
+    }
+
+    .btn-group>.btn, .btn-group-vertical>.btn {
+        position: relative;
+        float: left;
+    }
+
+    .btn-success {
+        color: #fff;
+        background-color: #5cb85c;
+        border-color: #4cae4c;
+    }
+
+    .btn-group, .btn-group-vertical {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .btn-group>.btn, .btn-group-vertical>.btn {
+        position: relative;
+        float: left;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        padding: 2px 4px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        border-radius: 4px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .checkbox {
+        visibility: hidden !important;
+    }
+
+    #text1 {
+        display: inline-block;
+    }
+
+    #time {
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    bottom: 10px;
+    right: 7px;
+    font-size: 13px;
+    color: #258fe0;
+   }
+
+   #innerText {
+      font-weight: bold
+   }
+
+   #showMore {
+     text-decoration: underline
+   }
+
+  #hr3 {
+    border-width: 2px;
+    margin-bottom: 11px;
+    margin-top: 19px;
+    width:100%
+  }
+
+  #hr2 {
+    border-width: 2px;
+    margin-bottom: 16px;
+    /* margin-top: 30px; */
+    width: 100%;
+  }
+
+  #alertButton {
+    border-radius: 27px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    font: 100%/1.5em "Droid Sans", sans-serif;
+    background: #2ba2c1eb;
+    padding: 10px 20px;
+    margin: 17px 16px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    width: 76%;
+
+  }
+
+  #upAndDownArrows {
+    margin-left: 30px
+  }
+
+  .number , .number1{
+    margin-left: 6px;
+  }
+
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+#live-chat form {
+  padding: 24px;
+}
+
+#live-chat input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  outline: none;
+  width: 234px;
+}
+
+.openCall {
+  font-size: 30px;
+  margin-right: 12px;
+}
+
+#main_input_box{
+  width:100%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 66%;
+}
+
+/* The Close Button */
+.close2 {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -31px;
+  margin-right: -25px;
+
+}
+
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* w3schools */
+
+/* The container */
+.containerC {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.containerC input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 19px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.containerC input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.containerC input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.containerC .checkmark:after {
+top: 5px;
+left: 6px;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: white;
+}
+
+
+#checkboxConditions {
+  margin: 20px;
+}
+
+
+
+
+#paper {
+	color:#FFF;
+	font-size:20px;
+}
+#margin {
+	/* margin-left:12px;
+	margin-bottom:20px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;  */
+}
+#text {
+	  /* width: 500px; */
+    /* overflow: hidden; */
+    background-color: #FFF;
+    color: #222;
+    font-family: Courier, monospace;
+    font-weight: normal;
+    font-size: 24px;
+    /* resize: none; */
+    /* line-height: 40px; */
+    /* padding-left: 100px; */
+    /* padding-right: 100px; */
+    /* padding-top: 45px; */
+    /* padding-bottom: 34px; */
+    background-image: url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+    /* background-repeat: repeat-y, repeat; */
+    /* -webkit-border-radius: 12px; */
+    /* border-radius: 12px; */
+    /* -webkit-box-shadow: 0px 2px 14px #000; */
+    /* box-shadow: 0px 2px 14px #000; */
+    /* border-top: 1px solid #FFF; */
+    /* border-bottom: 1px solid #FFF; */
+    border: none;
+}
+#title {
+	background-color:transparent;
+	border-bottom:3px solid #FFF;
+	color:#FFF;
+	font-size:20px;
+	font-family:Courier, monospace;
+	height:28px;
+	font-weight:bold;
+	width:220px;
+}
+#button {
+	cursor:pointer;
+	margin-top:20px;
+	float:right;
+	height:40px;
+	padding-left:24px;
+	padding-right:24px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:20px;
+	color:#FFF;
+	text-shadow: 0px -1px 0px #000000;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border-top:1px solid #FFF;
+	-webkit-box-shadow: 0px 2px 14px #000;
+	box-shadow: 0px 2px 14px #000;
+	background-color: #62add6;
+	background-image:url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
+	background-repeat:repeat-x;
+}
+#button:active {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+#button:focus {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+#wrapper {
+	/* width:700px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:24px;
+  margin-bottom:100px; */
+  margin: 20px;
+}
+
+#loginForm {
+  padding: 12px 20px;
+    width: 300px;
+    color: white;
+    font-weight: bold;
+    background-color: #2ba2c1eb;
+    margin-left: 20px;
+    border-radius: 7px;
+}
+
+#footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid black;
+}
+
+.txt1 {
+  font-size: 14px;
+  font-family: Helvetica;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+
+.slider {
+  /* position: absolute; */
+    width: 100%;
+    height: 101%;
+    bottom: 0;
+    overflow: hidden;
+    background: #c8e0d6;
+    transition: all 1s;
+    z-index: 1;
+    transition: all .3s ease-out;
+}
+
+.slider.display1 {
+    display: none
+}
+
+.slider.close1 {
+
+  top: 100vh;
+  height: 0;
+}
+
+#addFile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.filter {
+    border: 2px solid #d6d6d6;
+    /* border-radius: 2px; */
+    /* height: 45px; */
+    /* width: 248px; */
+    padding: 6px 4px;
+    /* color: #ce4c00; */
+    margin: 10px 0px -35px 10px;
+    /* margin-right: 20px; */
+    font: 13px verdana;
+    background-color: white;
+}
