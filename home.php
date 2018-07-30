@@ -7,13 +7,13 @@
   function textCurrentUserLocation(&$userStreetAddress)
   {
     setupTwilioAct();
-    $to = '+15103220889';
+    $to = '';
     if(!empty($to))
     {
       $sid = $_ENV["Twilio_Acct_SID"];
       $token = $_ENV["Twilio_Acct_Auth"];
       $client = new Client($sid, $token);
-      
+
     $client->messages->create(
       $to,
       array(
