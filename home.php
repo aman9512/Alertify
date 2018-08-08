@@ -7,7 +7,7 @@
   function textCurrentUserLocation(&$userStreetAddress)
   {
     setupTwilioAct();
-    $to = '';
+    $to = '+15103220889';
     if(!empty($to))
     {
       $sid = $_ENV["Twilio_Acct_SID"];
